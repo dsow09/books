@@ -1,0 +1,10 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="nav-link" routerLink="books" routerLinkActive="active">Livres</a>
+    <form class="d-flex">
+     <a routerLink="auth/signup" class="nav-link me-3" *ngIf="!isAuth">Créer un compte</a>
+     <a routerLink="auth/signin" class="nav-link" *ngIf="!isAuth">Connexion</a>
+     <a (click)="onSignOut()" *ngIf="isAuth" style="cursor: pointer">Déconnexion</a>
+    </form>
+  </div>
+</nav>
